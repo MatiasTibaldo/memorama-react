@@ -1,0 +1,24 @@
+.header{
+    height: 10vh;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.header .title{
+    padding: 20px;
+    display: flex;
+    justify-content:center ;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.header .buttonReset{
+    padding: 20px;
+    color: yellow;
+    background-color: red;
+    font-size: 16px;
+}
