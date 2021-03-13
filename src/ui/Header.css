@@ -1,6 +1,5 @@
 .header{
     height: 10vh;
-    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-content: center;
@@ -18,6 +17,7 @@
 
 .header .buttonReset{
     padding: 20px;
+    margin:20px;
     color: yellow;
     background-color: red;
     font-size: 16px;

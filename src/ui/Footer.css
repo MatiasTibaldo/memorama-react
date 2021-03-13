@@ -1,6 +1,5 @@
 .footer{
     height: 10vh;
-    padding: 20px;
     display: flex;
     justify-content: flex-end;
 }
