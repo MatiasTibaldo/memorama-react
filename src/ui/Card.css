@@ -16,21 +16,15 @@
     z-index: 2;
     transform: rotateY(0deg);
     transition: all 0.3s linear ;
+    transform: rotateY(180deg);
 }   
 
 .front {
     transition: all 0.3s linear;
     transform: rotateY(180deg);
+    transform: rotateY(360deg);
 }
 
 .card {
     position: relative;
-}
-
-.card:hover .back {
-    transform: rotateY(180deg);
-}
-
-.card:hover .front {
-transform: rotateY(360deg);
 }

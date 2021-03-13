@@ -4,12 +4,16 @@ import ImageRandom from './ImageRandom';
 
 export default class Card  extends Component{
     render(){
+        const visible = (this.props.isSelectNow || this.props.wasGuessed);
         return(
-            <div className='card'>
-                <div className={'front'}>
-                    <ImageRandom width={150} height={150} topic={this.props.topic}/>
-                </div>
-                <div className={'back'}/>
+            <div className='card' onClick={this.props.selectCard}>
+                {visible && <div className={'front'} >
+                        <ImageRandom width={150} height={150} topic={this.props.topic}/>
+                    </div>
+                }
+                {!visible &&                
+                    <div className={'back'}/>
+                }
             </div>
         )
     }

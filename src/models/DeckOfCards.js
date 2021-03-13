@@ -10,6 +10,7 @@ function deckOfCards(){
         const index  = Math.floor(Math.random()*ListOfTopics.length);
         const card ={
             topic: ListOfTopics.splice(index,1),
+            wasGuessed: false,
         }
 
         deck.push(card);
