@@ -3,3 +3,9 @@
     display: flex;
     justify-content: flex-end;
 }
+.turn, .hits{
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}

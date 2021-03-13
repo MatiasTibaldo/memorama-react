@@ -11,6 +11,9 @@ const init = ()=>{
     deckOfCards,
     pairOfCardSelected:[],
     isComparing:false,
+    player:1,
+    points1:0,
+    points2:0,
   };
 }
 
@@ -24,7 +27,7 @@ class App extends Component {
        <div className="App">
           <Header/>
           <Board deck={this.state.deckOfCards} pairOfCard={this.state.pairOfCardSelected} selectCard={(card)=>this.selectCard(card)}/>
-          <Footer/>
+          <Footer  player={this.state.player} points1={this.state.points1} points2={this.state.points2}/>
       </div>
     );
  }
@@ -49,25 +52,52 @@ class App extends Component {
 
     setTimeout(()=>{
       const [card1, card2]=pairOfCard;
+      let player= this.state.player;
+      let points1 = this.state.points1;
+      let points2 = this.state.points2;
       let deck = this.state.deckOfCards;
       if(card1.topic === card2.topic){
+        if(player===1){
+          points1=points1+1;
+        }else{
+          points2=points2+1;
+        }
         deck = deck.map((card)=>{
           if(card.topic!==card1.topic){
             return card;
           }
           return {...card,wasGuessed:true};
         });
+      }else{ // si no hay acierto cambia el turno al otro jugador
+        player = player===1?2:1;
       }
-
+      this.validateWinner(deck,points1,points2);
       this.setState({
         deckOfCards:deck,
         pairOfCardSelected:[],
         isComparing:false,
+        player:player,
+        points1:points1,
+        points2:points2,
       });
     },1000)
-    
-  }
+  }  
 
+  validateWinner(deck,points1,points2){
+    if(deck.filter((card)=>!card.wasGuessed).length===0){
+      if(points1>points2){
+        alert("Ganador jugador número 1")
+      }
+      if(points2>points1){
+        alert("Ganador jugador número 2")
+      }
+      if(points1===points2){
+        alert("Empate")
+
+      }
+    }
+  }
+  
 }
 
 export default App;
