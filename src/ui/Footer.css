@@ -3,9 +3,16 @@
     display: flex;
     justify-content: flex-end;
 }
-.turn, .hits{
+.turn1, .turn2, .hits{
+    color:white;
     width: 50%;
     text-align: center;
     padding: 20px;
     font-size: 20px;
+}
+.turn1, .player1{
+    background-color: green;
+}
+.turn2, .player2{
+    background-color: red;
 }

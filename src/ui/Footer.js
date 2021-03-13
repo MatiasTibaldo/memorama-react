@@ -5,7 +5,7 @@ export default class Footer extends Component{
     render(){
         return(
             <footer className='footer'>
-                <div className='turn'>
+                <div className={`turn${this.props.player}`}>
                     Turno jugador {this.props.player}
                 </div>
                 <div className='hits'>
