@@ -7,8 +7,8 @@ export default class Card  extends Component{
         const visible = (this.props.isSelectNow || this.props.wasGuessed);
         return(
             <div className='card' onClick={this.props.selectCard}>
-                {visible && <div className={'front'} >
-                        <ImageRandom width={150} height={150} topic={this.props.topic}/>
+                {<div className={'front'} >
+                        <ImageRandom width={150} height={150} topic={this.props.topic} visible={visible}/>
                     </div>
                 }
                 {!visible &&                

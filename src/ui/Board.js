@@ -17,7 +17,8 @@ export default class Board  extends Component{
                                     selectCard={()=>this.props.selectCard(card)} 
                                     pairOfCard={this.props.pairOfCard} 
                                     wasGuessed={card.wasGuessed} 
-                                    isSelectNow={isSelectNow}/>
+                                    isSelectNow={isSelectNow}
+                                />
                         }
                     )
                   }
