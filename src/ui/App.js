@@ -99,9 +99,7 @@ class App extends Component {
   }
 
   reset(){
-    this.setState(
-      init()
-    );
+    window.location.reload();
   }
 }
 
