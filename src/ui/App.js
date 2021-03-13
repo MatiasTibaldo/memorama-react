@@ -25,7 +25,7 @@ class App extends Component {
   render(){
      return (
        <div className="App">
-          <Header/>
+          <Header reset={()=>this.reset()}/>
           <Board deck={this.state.deckOfCards} pairOfCard={this.state.pairOfCardSelected} selectCard={(card)=>this.selectCard(card)}/>
           <Footer  player={this.state.player} points1={this.state.points1} points2={this.state.points2}/>
       </div>
@@ -97,7 +97,12 @@ class App extends Component {
       }
     }
   }
-  
+
+  reset(){
+    this.setState(
+      init()
+    );
+  }
 }
 
 export default App;

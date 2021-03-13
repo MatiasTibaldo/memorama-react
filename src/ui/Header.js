@@ -7,7 +7,7 @@ export default class Header extends Component{
             <header className='header'>
                 <div className='title'>Memorama</div>
                 <div>
-                    <button className='buttonReset'>Reiniciar</button>
+                    <button className='buttonReset' onClick={this.props.reset}>Reiniciar</button>
                 </div>
             </header>
         );
